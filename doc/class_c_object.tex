@@ -1,0 +1,308 @@
+\hypertarget{class_c_object}{}\doxysection{CObject Class Reference}
+\label{class_c_object}\index{CObject@{CObject}}
+
+
+General class for all objects.  
+
+
+
+
+{\ttfamily \#include $<$CObject.\+h$>$}
+
+Inheritance diagram for CObject\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.456790cm]{class_c_object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_object_ac44111d5ac75248a616df61b038c4153}\label{class_c_object_ac44111d5ac75248a616df61b038c4153}} 
+\mbox{\hyperlink{class_c_object_ac44111d5ac75248a616df61b038c4153}{CObject}} ()
+\begin{DoxyCompactList}\small\item\em Object\textquotesingle{}s empty constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_object_a1b5a1ec5b24434339d5f1fe9ca388d4a}{CObject}} (bool c)
+\begin{DoxyCompactList}\small\item\em Constructor with can\+Step parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_object_a75fc8a71d266f635f42955a16361036d}\label{class_c_object_a75fc8a71d266f635f42955a16361036d}} 
+virtual \mbox{\hyperlink{class_c_object_a75fc8a71d266f635f42955a16361036d}{$\sim$\+CObject}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_object_a982baae206cb428608c7c6b033f5c70e}{set\+Position}} (const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \&pos, int tile\+Size)
+\begin{DoxyCompactList}\small\item\em Setting position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_object_a7fad0449de0b9877b338ed0d23bd3f82}{set\+Source}} (int x, int y, int w, int h)
+\begin{DoxyCompactList}\small\item\em Setting source rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_object_a6e07f9fdc797ae1ca39ce70230d35f36}{set\+Image}} (const string \&filename, SDL\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Setting image to an object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_object_a6966f8f947f15ef4aa7c993aa9ca9e0a}{draw}} (SDL\+\_\+\+Renderer $\ast$renderer) const
+\begin{DoxyCompactList}\small\item\em Drawing current object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_object_a70db769de3d5a5f777896e96b11b1435}\label{class_c_object_a70db769de3d5a5f777896e96b11b1435}} 
+void \mbox{\hyperlink{class_c_object_a70db769de3d5a5f777896e96b11b1435}{quit}} () const
+\begin{DoxyCompactList}\small\item\em Deleting object\textquotesingle{}s texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_object_a3909be52da8b97e91b740cf59b9a3ecf}{set\+Can\+Step}} (bool s)
+\begin{DoxyCompactList}\small\item\em Setting that you can step on a tile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_object_ae110758332cbfb99cf4d7cb2aa01d98b}{set\+Id}} (int i)
+\begin{DoxyCompactList}\small\item\em Setting object\textquotesingle{}s id. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_object_a66294f63d9c36cfaee7496ac13308613}{set\+Texture}} (SDL\+\_\+\+Texture $\ast$tex)
+\begin{DoxyCompactList}\small\item\em Setting object\textquotesingle{}s texture. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{class_c_object_acff6a7b328002a76d983532d072077b9}{get\+Source}} () const
+\begin{DoxyCompactList}\small\item\em Getting object\textquotesingle{}s source. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Texture $\ast$ \mbox{\hyperlink{class_c_object_aa28bfaa7ddff919616b646a69a94fdc7}{get\+Texture}} () const
+\begin{DoxyCompactList}\small\item\em Getting object\textquotesingle{}s texture. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_object_ace1b0efae863478190c652653b002a8b}{can\+Step\+On}} () const
+\begin{DoxyCompactList}\small\item\em Can step getter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_c_object_a21b5fc11bdd1fff48e40c0c4394c3b19}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Getting object\textquotesingle{}s id. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \& \mbox{\hyperlink{class_c_object_ac8ac726b1186e5e9d80f374546dc6e95}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Getting object\textquotesingle{}s position. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_c_object_a2c10810aeab8dbac0800c3a583823e81}{eat}} () const
+\begin{DoxyCompactList}\small\item\em Eating this tile method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_object_a18101fbd57a315bc031f380317caab4d}\label{class_c_object_a18101fbd57a315bc031f380317caab4d}} 
+\mbox{\hyperlink{class_c_config}{CConfig}} $\ast$ {\bfseries config} \{\}
+\item 
+\mbox{\Hypertarget{class_c_object_ac8f6b0556f4113df5bda514517f737a4}\label{class_c_object_ac8f6b0556f4113df5bda514517f737a4}} 
+int {\bfseries id} \{\}
+\item 
+\mbox{\Hypertarget{class_c_object_aaf7e23f75013eaa0023d4ad0d6c8281b}\label{class_c_object_aaf7e23f75013eaa0023d4ad0d6c8281b}} 
+\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} {\bfseries position} \{0, 0\}
+\item 
+\mbox{\Hypertarget{class_c_object_a4e9bcbb482e96c0bc148eb1329ab846c}\label{class_c_object_a4e9bcbb482e96c0bc148eb1329ab846c}} 
+bool {\bfseries can\+Step}
+\item 
+\mbox{\Hypertarget{class_c_object_a356e3d5a75c825eaf2292d5e8ddf6943}\label{class_c_object_a356e3d5a75c825eaf2292d5e8ddf6943}} 
+SDL\+\_\+\+Texture $\ast$ {\bfseries texture} \{\}
+\item 
+\mbox{\Hypertarget{class_c_object_af682dca2096a3e2dd6aeefe6bee4ed0d}\label{class_c_object_af682dca2096a3e2dd6aeefe6bee4ed0d}} 
+SDL\+\_\+\+Rect {\bfseries obj} \{\}
+\item 
+\mbox{\Hypertarget{class_c_object_a0ba117aaf56a51723e5eb46e1486ed28}\label{class_c_object_a0ba117aaf56a51723e5eb46e1486ed28}} 
+SDL\+\_\+\+Rect {\bfseries src} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General class for all objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_object_a1b5a1ec5b24434339d5f1fe9ca388d4a}\label{class_c_object_a1b5a1ec5b24434339d5f1fe9ca388d4a}} 
+\index{CObject@{CObject}!CObject@{CObject}}
+\index{CObject@{CObject}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{CObject()}{CObject()}}
+{\footnotesize\ttfamily CObject\+::\+CObject (\begin{DoxyParamCaption}\item[{bool}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor with can\+Step parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Can\+Step \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_object_ace1b0efae863478190c652653b002a8b}\label{class_c_object_ace1b0efae863478190c652653b002a8b}} 
+\index{CObject@{CObject}!canStepOn@{canStepOn}}
+\index{canStepOn@{canStepOn}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{canStepOn()}{canStepOn()}}
+{\footnotesize\ttfamily bool CObject\+::can\+Step\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Can step getter. 
+
+\begin{DoxyReturn}{Returns}
+Boolean that shows if sprite can step on this tile 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_object_a6966f8f947f15ef4aa7c993aa9ca9e0a}\label{class_c_object_a6966f8f947f15ef4aa7c993aa9ca9e0a}} 
+\index{CObject@{CObject}!draw@{draw}}
+\index{draw@{draw}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void CObject\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption}) const}
+
+
+
+Drawing current object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & App\textquotesingle{}s renderer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_object_a2c10810aeab8dbac0800c3a583823e81}\label{class_c_object_a2c10810aeab8dbac0800c3a583823e81}} 
+\index{CObject@{CObject}!eat@{eat}}
+\index{eat@{eat}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{eat()}{eat()}}
+{\footnotesize\ttfamily int CObject\+::eat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Eating this tile method. 
+
+\begin{DoxyReturn}{Returns}
+Points that must be given to Pacman 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_bonus_ab68cdb28fdb9ad3746d19486d77b3a8e}{CBonus}}, \mbox{\hyperlink{class_c_energisers_a4fcca7740bc16151cc63e7b0d6833331}{CEnergisers}}, and \mbox{\hyperlink{class_c_food_a12c2ec7b4ac17353eb122bff46298836}{CFood}}.
+
+\mbox{\Hypertarget{class_c_object_a21b5fc11bdd1fff48e40c0c4394c3b19}\label{class_c_object_a21b5fc11bdd1fff48e40c0c4394c3b19}} 
+\index{CObject@{CObject}!getId@{getId}}
+\index{getId@{getId}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int CObject\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getting object\textquotesingle{}s id. 
+
+\begin{DoxyReturn}{Returns}
+Object\textquotesingle{}s id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_object_ac8ac726b1186e5e9d80f374546dc6e95}\label{class_c_object_ac8ac726b1186e5e9d80f374546dc6e95}} 
+\index{CObject@{CObject}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \& CObject\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getting object\textquotesingle{}s position. 
+
+\begin{DoxyReturn}{Returns}
+Object\textquotesingle{}s position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_object_acff6a7b328002a76d983532d072077b9}\label{class_c_object_acff6a7b328002a76d983532d072077b9}} 
+\index{CObject@{CObject}!getSource@{getSource}}
+\index{getSource@{getSource}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{getSource()}{getSource()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Rect CObject\+::get\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getting object\textquotesingle{}s source. 
+
+\begin{DoxyReturn}{Returns}
+Source rectangle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_object_aa28bfaa7ddff919616b646a69a94fdc7}\label{class_c_object_aa28bfaa7ddff919616b646a69a94fdc7}} 
+\index{CObject@{CObject}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture$\ast$ CObject\+::get\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getting object\textquotesingle{}s texture. 
+
+\begin{DoxyReturn}{Returns}
+Texture 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_object_a3909be52da8b97e91b740cf59b9a3ecf}\label{class_c_object_a3909be52da8b97e91b740cf59b9a3ecf}} 
+\index{CObject@{CObject}!setCanStep@{setCanStep}}
+\index{setCanStep@{setCanStep}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{setCanStep()}{setCanStep()}}
+{\footnotesize\ttfamily void CObject\+::set\+Can\+Step (\begin{DoxyParamCaption}\item[{bool}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setting that you can step on a tile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Can step boolean \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_object_ae110758332cbfb99cf4d7cb2aa01d98b}\label{class_c_object_ae110758332cbfb99cf4d7cb2aa01d98b}} 
+\index{CObject@{CObject}!setId@{setId}}
+\index{setId@{setId}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void CObject\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setting object\textquotesingle{}s id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_object_a6e07f9fdc797ae1ca39ce70230d35f36}\label{class_c_object_a6e07f9fdc797ae1ca39ce70230d35f36}} 
+\index{CObject@{CObject}!setImage@{setImage}}
+\index{setImage@{setImage}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{setImage()}{setImage()}}
+{\footnotesize\ttfamily void CObject\+::set\+Image (\begin{DoxyParamCaption}\item[{const string \&}]{filename,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Setting image to an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of a file from which we are importing image \\
+\hline
+{\em renderer} & App\textquotesingle{}s renderer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_object_a982baae206cb428608c7c6b033f5c70e}\label{class_c_object_a982baae206cb428608c7c6b033f5c70e}} 
+\index{CObject@{CObject}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void CObject\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \&}]{pos,  }\item[{int}]{tile\+Size }\end{DoxyParamCaption})}
+
+
+
+Setting position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & New position \\
+\hline
+{\em tile\+Size} & Object\textquotesingle{}s size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_object_a7fad0449de0b9877b338ed0d23bd3f82}\label{class_c_object_a7fad0449de0b9877b338ed0d23bd3f82}} 
+\index{CObject@{CObject}!setSource@{setSource}}
+\index{setSource@{setSource}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{setSource()}{setSource()}}
+{\footnotesize\ttfamily void CObject\+::set\+Source (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Setting source rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Dimension x \\
+\hline
+{\em y} & Dimension y \\
+\hline
+{\em w} & Width \\
+\hline
+{\em h} & Height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_object_a66294f63d9c36cfaee7496ac13308613}\label{class_c_object_a66294f63d9c36cfaee7496ac13308613}} 
+\index{CObject@{CObject}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}}
+{\footnotesize\ttfamily void CObject\+::set\+Texture (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Texture $\ast$}]{tex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setting object\textquotesingle{}s texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tex} & Texture \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Object/CObject.\+h\item 
+src/\+Object/CObject.\+cpp\end{DoxyCompactItemize}

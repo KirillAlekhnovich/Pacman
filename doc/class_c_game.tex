@@ -1,0 +1,169 @@
+\hypertarget{class_c_game}{}\doxysection{CGame Class Reference}
+\label{class_c_game}\index{CGame@{CGame}}
+
+
+Realistaion of game process.  
+
+
+
+
+{\ttfamily \#include $<$CGame.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_c_game_ac967c65d9a21eaa30211968e5aa16ba5}{run}} (\mbox{\hyperlink{class_c_config}{CConfig}} $\ast$setup, SDL\+\_\+\+Renderer $\ast$ren, SDL\+\_\+\+Window $\ast$win)
+\begin{DoxyCompactList}\small\item\em Initializing everything in gameplay. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_game_a91e00e4afbdcf662f602c8ab0f275bcf}{input}} ()
+\begin{DoxyCompactList}\small\item\em Reading input keys and processing it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_game_acbaf8eef1f73ecf20b69d5c05696f364}\label{class_c_game_acbaf8eef1f73ecf20b69d5c05696f364}} 
+void \mbox{\hyperlink{class_c_game_acbaf8eef1f73ecf20b69d5c05696f364}{quit}} ()
+\begin{DoxyCompactList}\small\item\em Quitting the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_game_ac0d0de36fed825496bc7f81f9681681e}\label{class_c_game_ac0d0de36fed825496bc7f81f9681681e}} 
+void \mbox{\hyperlink{class_c_game_ac0d0de36fed825496bc7f81f9681681e}{next\+Lvl}} ()
+\begin{DoxyCompactList}\small\item\em Moving to the next level and changing configurations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_game_ad079f819374fbb28f15d7d99512e8881}\label{class_c_game_ad079f819374fbb28f15d7d99512e8881}} 
+void \mbox{\hyperlink{class_c_game_ad079f819374fbb28f15d7d99512e8881}{init\+Sprites}} ()
+\begin{DoxyCompactList}\small\item\em Initializing sprites. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_game_aedbfdbb54814be5eab1a26ca72e2ec84}{game\+Over}} () const
+\begin{DoxyCompactList}\small\item\em Processing game over screen if pacman has died {\itshape pacman\+Lives} times. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_game_a807e4a2487f70ff5a82cd9afd1cfbf9a}\label{class_c_game_a807e4a2487f70ff5a82cd9afd1cfbf9a}} 
+void \mbox{\hyperlink{class_c_game_a807e4a2487f70ff5a82cd9afd1cfbf9a}{mode\+Timers}} ()
+\begin{DoxyCompactList}\small\item\em Resetting mode timers and changing mode if it\textquotesingle{}s needed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_game_aa48edfb118204d6bba81fbf6c8ad010e}\label{class_c_game_aa48edfb118204d6bba81fbf6c8ad010e}} 
+void \mbox{\hyperlink{class_c_game_aa48edfb118204d6bba81fbf6c8ad010e}{update}} ()
+\begin{DoxyCompactList}\small\item\em Drawing all the textures in current state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_game_aa7111dfb83d9fc831aa562032b3699f3}\label{class_c_game_aa7111dfb83d9fc831aa562032b3699f3}} 
+void \mbox{\hyperlink{class_c_game_aa7111dfb83d9fc831aa562032b3699f3}{eat}} ()
+\begin{DoxyCompactList}\small\item\em Resolving Pacman\textquotesingle{}s eating. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_game_a689cd408ea1169a56dc7d3b84eb03a5f}{sprites\+Collision}} (\mbox{\hyperlink{class_c_ghost}{CGhost}} $\ast$ghost)
+\begin{DoxyCompactList}\small\item\em Checking if ghosts collide with Pacman. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_game_a31fbe3b81d9dc813b31f2c19a21428e8}{ghost\+Eaten}} (\mbox{\hyperlink{class_c_ghost}{CGhost}} $\ast$ghost)
+\begin{DoxyCompactList}\small\item\em If mode is frightened and ghost has to be eaten. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_game_a081cfecbc61119cd6c790bad5d69dcb7}\label{class_c_game_a081cfecbc61119cd6c790bad5d69dcb7}} 
+void \mbox{\hyperlink{class_c_game_a081cfecbc61119cd6c790bad5d69dcb7}{pacman\+Eaten}} () const
+\begin{DoxyCompactList}\small\item\em Pacman is eaten by ghosts, resetting the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_game_ad74c567f824fbbfe98f199b61ea7711c}{out\+Of\+Prison}} (\mbox{\hyperlink{class_c_ghost}{CGhost}} $\ast$ghost, int additional\+Wait)
+\begin{DoxyCompactList}\small\item\em Trying to get ghosts out of prison. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_game_ac826ac8cc151d1eefd2c46fa88cd8191}{is\+Restart}} () const
+\begin{DoxyCompactList}\small\item\em Boolean constant that shows if player wants to play one more game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Realistaion of game process. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_game_aedbfdbb54814be5eab1a26ca72e2ec84}\label{class_c_game_aedbfdbb54814be5eab1a26ca72e2ec84}} 
+\index{CGame@{CGame}!gameOver@{gameOver}}
+\index{gameOver@{gameOver}!CGame@{CGame}}
+\doxysubsubsection{\texorpdfstring{gameOver()}{gameOver()}}
+{\footnotesize\ttfamily bool CGame\+::game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Processing game over screen if pacman has died {\itshape pacman\+Lives} times. 
+
+\begin{DoxyReturn}{Returns}
+If player wants to play more -\/ return false, else -\/ return true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_game_a31fbe3b81d9dc813b31f2c19a21428e8}\label{class_c_game_a31fbe3b81d9dc813b31f2c19a21428e8}} 
+\index{CGame@{CGame}!ghostEaten@{ghostEaten}}
+\index{ghostEaten@{ghostEaten}!CGame@{CGame}}
+\doxysubsubsection{\texorpdfstring{ghostEaten()}{ghostEaten()}}
+{\footnotesize\ttfamily void CGame\+::ghost\+Eaten (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_ghost}{CGhost}} $\ast$}]{ghost }\end{DoxyParamCaption})}
+
+
+
+If mode is frightened and ghost has to be eaten. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ghost} & Each ghost one by one \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_game_a91e00e4afbdcf662f602c8ab0f275bcf}\label{class_c_game_a91e00e4afbdcf662f602c8ab0f275bcf}} 
+\index{CGame@{CGame}!input@{input}}
+\index{input@{input}!CGame@{CGame}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily bool CGame\+::input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reading input keys and processing it. 
+
+\begin{DoxyReturn}{Returns}
+Returning false if window has to be close, else -\/ true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_game_ac826ac8cc151d1eefd2c46fa88cd8191}\label{class_c_game_ac826ac8cc151d1eefd2c46fa88cd8191}} 
+\index{CGame@{CGame}!isRestart@{isRestart}}
+\index{isRestart@{isRestart}!CGame@{CGame}}
+\doxysubsubsection{\texorpdfstring{isRestart()}{isRestart()}}
+{\footnotesize\ttfamily bool CGame\+::is\+Restart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Boolean constant that shows if player wants to play one more game. 
+
+\begin{DoxyReturn}{Returns}
+Bool depending on player\textquotesingle{}s choice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_game_ad74c567f824fbbfe98f199b61ea7711c}\label{class_c_game_ad74c567f824fbbfe98f199b61ea7711c}} 
+\index{CGame@{CGame}!outOfPrison@{outOfPrison}}
+\index{outOfPrison@{outOfPrison}!CGame@{CGame}}
+\doxysubsubsection{\texorpdfstring{outOfPrison()}{outOfPrison()}}
+{\footnotesize\ttfamily void CGame\+::out\+Of\+Prison (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_ghost}{CGhost}} $\ast$}]{ghost,  }\item[{int}]{additional\+Wait }\end{DoxyParamCaption})}
+
+
+
+Trying to get ghosts out of prison. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ghost} & Each ghost one by one \\
+\hline
+{\em additional\+Wait} & Ghosts shouldn\textquotesingle{}t leave prison at the same time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_game_ac967c65d9a21eaa30211968e5aa16ba5}\label{class_c_game_ac967c65d9a21eaa30211968e5aa16ba5}} 
+\index{CGame@{CGame}!run@{run}}
+\index{run@{run}!CGame@{CGame}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily bool CGame\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_config}{CConfig}} $\ast$}]{setup,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{ren,  }\item[{SDL\+\_\+\+Window $\ast$}]{win }\end{DoxyParamCaption})}
+
+
+
+Initializing everything in gameplay. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em setup} & Importing game configurations \\
+\hline
+{\em ren} & Importing window renderer \\
+\hline
+{\em win} & Importing window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returning false if something went wrong 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_game_a689cd408ea1169a56dc7d3b84eb03a5f}\label{class_c_game_a689cd408ea1169a56dc7d3b84eb03a5f}} 
+\index{CGame@{CGame}!spritesCollision@{spritesCollision}}
+\index{spritesCollision@{spritesCollision}!CGame@{CGame}}
+\doxysubsubsection{\texorpdfstring{spritesCollision()}{spritesCollision()}}
+{\footnotesize\ttfamily void CGame\+::sprites\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_ghost}{CGhost}} $\ast$}]{ghost }\end{DoxyParamCaption})}
+
+
+
+Checking if ghosts collide with Pacman. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ghost} & Each ghost one by one \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game/CGame.\+h\item 
+src/\+Game/CGame.\+cpp\end{DoxyCompactItemize}

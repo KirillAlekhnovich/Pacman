@@ -1,0 +1,74 @@
+\hypertarget{class_c_game_over_menu}{}\doxysection{CGame\+Over\+Menu Class Reference}
+\label{class_c_game_over_menu}\index{CGameOverMenu@{CGameOverMenu}}
+
+
+Menu that is shown when Pamcan dies.  
+
+
+
+
+{\ttfamily \#include $<$CGame\+Over\+Menu.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_game_over_menu_ab36d886b78851cc50f06e6775b80aec4}\label{class_c_game_over_menu_ab36d886b78851cc50f06e6775b80aec4}} 
+void \mbox{\hyperlink{class_c_game_over_menu_ab36d886b78851cc50f06e6775b80aec4}{prepare\+Textures}} ()
+\begin{DoxyCompactList}\small\item\em Preparing textures for game over menu (texts) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_game_over_menu_ad031cefd00c8f31832a1a4e45aad3c0b}{call}} (SDL\+\_\+\+Window $\ast$win, SDL\+\_\+\+Renderer $\ast$ren, \mbox{\hyperlink{class_c_config}{CConfig}} $\ast$setup)
+\begin{DoxyCompactList}\small\item\em Calling game over menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_game_over_menu_af21207781bf29c36e84b93bc38630532}\label{class_c_game_over_menu_af21207781bf29c36e84b93bc38630532}} 
+void \mbox{\hyperlink{class_c_game_over_menu_af21207781bf29c36e84b93bc38630532}{render}} () const
+\begin{DoxyCompactList}\small\item\em Drawing menu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_game_over_menu_aa5cd3957e7d7996f86da677a38fb1350}{input}} ()
+\begin{DoxyCompactList}\small\item\em Processing player\textquotesingle{}s input. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_game_over_menu_a65a74315b29c73bd0c6821958a6a1b82}\label{class_c_game_over_menu_a65a74315b29c73bd0c6821958a6a1b82}} 
+void \mbox{\hyperlink{class_c_game_over_menu_a65a74315b29c73bd0c6821958a6a1b82}{quit}} ()
+\begin{DoxyCompactList}\small\item\em Destroying used textures and fonts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Menu that is shown when Pamcan dies. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_game_over_menu_ad031cefd00c8f31832a1a4e45aad3c0b}\label{class_c_game_over_menu_ad031cefd00c8f31832a1a4e45aad3c0b}} 
+\index{CGameOverMenu@{CGameOverMenu}!call@{call}}
+\index{call@{call}!CGameOverMenu@{CGameOverMenu}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily bool CGame\+Over\+Menu\+::call (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Window $\ast$}]{win,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{ren,  }\item[{\mbox{\hyperlink{class_c_config}{CConfig}} $\ast$}]{setup }\end{DoxyParamCaption})}
+
+
+
+Calling game over menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & App\textquotesingle{}s window \\
+\hline
+{\em ren} & App\textquotesingle{}s renderer \\
+\hline
+{\em setup} & Game\textquotesingle{}s configurations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if player wants to play more, else -\/ false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_game_over_menu_aa5cd3957e7d7996f86da677a38fb1350}\label{class_c_game_over_menu_aa5cd3957e7d7996f86da677a38fb1350}} 
+\index{CGameOverMenu@{CGameOverMenu}!input@{input}}
+\index{input@{input}!CGameOverMenu@{CGameOverMenu}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily bool CGame\+Over\+Menu\+::input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Processing player\textquotesingle{}s input. 
+
+\begin{DoxyReturn}{Returns}
+Returning boolean depending on player\textquotesingle{}s choice 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game/CGame\+Over\+Menu.\+h\item 
+src/\+Game/CGame\+Over\+Menu.\+cpp\end{DoxyCompactItemize}

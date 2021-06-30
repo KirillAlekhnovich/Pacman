@@ -1,0 +1,207 @@
+\hypertarget{class_c_moving_object}{}\doxysection{CMoving\+Object Class Reference}
+\label{class_c_moving_object}\index{CMovingObject@{CMovingObject}}
+
+
+General methods for both Pacman and ghosts.  
+
+
+
+
+{\ttfamily \#include $<$CMoving\+Object.\+h$>$}
+
+Inheritance diagram for CMoving\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_c_moving_object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_moving_object_addd58ed19ebbb2c273bc738df3f3891f}\label{class_c_moving_object_addd58ed19ebbb2c273bc738df3f3891f}} 
+\mbox{\hyperlink{class_c_moving_object_addd58ed19ebbb2c273bc738df3f3891f}{CMoving\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for moving object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_c_moving_object_af306ba531bdea8932f99c7f80accea26}{move}} (SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{class_c_map}{CMap}} \&map)=0
+\begin{DoxyCompactList}\small\item\em Moving an object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_c_moving_object_aba4b5e98d5e86ae405617eaebae49329}{set\+Model\+To\+Draw}} (SDL\+\_\+\+Rect \&tmp)=0
+\begin{DoxyCompactList}\small\item\em Setting model to draw. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_c_moving_object_af2c9d7c7ce167112b63e353b234f2df0}{set\+Direction}} (Direction direction, \mbox{\hyperlink{class_c_map}{CMap}} \&map)=0
+\begin{DoxyCompactList}\small\item\em Setting direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_moving_object_a2dc42f09fd4515c74f6d402886079689}{draw\+Preparation}} (SDL\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Preparing to draw an object, setting position and model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_moving_object_ae5cacdcdf6ca181c74c61be390ff7e85}{init}} (int sprite\+Size, \mbox{\hyperlink{class_c_config}{CConfig}} $\ast$setup)
+\begin{DoxyCompactList}\small\item\em Initializing new moving object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_moving_object_ad829c77d767f0ec57efd7fce98daf109}{step\+On\+Teleport}} (\mbox{\hyperlink{class_c_map}{CMap}} \&map)
+\begin{DoxyCompactList}\small\item\em Solving teleports logic. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_moving_object_a2a3b2509ce9f8f44cd5b4c54071a9872}{collision\+Correct}} (Direction \&direction)
+\begin{DoxyCompactList}\small\item\em Correcting collision at each tile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_moving_object_a57cb2f4ab6484da46c1e673ad778686d}{set\+Speed}} (int s)
+\begin{DoxyCompactList}\small\item\em Setting sprite\textquotesingle{}s speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_moving_object_ae527281c61f30042ca26fd26119dd849}\label{class_c_moving_object_ae527281c61f30042ca26fd26119dd849}} 
+int {\bfseries speed} \{\}
+\item 
+\mbox{\Hypertarget{class_c_moving_object_a8f70b96acd57913ced251cfa2b2c758e}\label{class_c_moving_object_a8f70b96acd57913ced251cfa2b2c758e}} 
+int {\bfseries update\+Timer} = \{\}
+\item 
+\mbox{\Hypertarget{class_c_moving_object_a1e7ee827e367d5a18b5b7297cc0a7249}\label{class_c_moving_object_a1e7ee827e367d5a18b5b7297cc0a7249}} 
+Direction {\bfseries current\+Direction}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General methods for both Pacman and ghosts. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_moving_object_a2a3b2509ce9f8f44cd5b4c54071a9872}\label{class_c_moving_object_a2a3b2509ce9f8f44cd5b4c54071a9872}} 
+\index{CMovingObject@{CMovingObject}!collisionCorrect@{collisionCorrect}}
+\index{collisionCorrect@{collisionCorrect}!CMovingObject@{CMovingObject}}
+\doxysubsubsection{\texorpdfstring{collisionCorrect()}{collisionCorrect()}}
+{\footnotesize\ttfamily bool CMoving\+Object\+::collision\+Correct (\begin{DoxyParamCaption}\item[{Direction \&}]{direction }\end{DoxyParamCaption})}
+
+
+
+Correcting collision at each tile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Current direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean that shows if collision has been corrected 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_moving_object_a2dc42f09fd4515c74f6d402886079689}\label{class_c_moving_object_a2dc42f09fd4515c74f6d402886079689}} 
+\index{CMovingObject@{CMovingObject}!drawPreparation@{drawPreparation}}
+\index{drawPreparation@{drawPreparation}!CMovingObject@{CMovingObject}}
+\doxysubsubsection{\texorpdfstring{drawPreparation()}{drawPreparation()}}
+{\footnotesize\ttfamily void CMoving\+Object\+::draw\+Preparation (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Preparing to draw an object, setting position and model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & App\textquotesingle{}s renderer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_moving_object_ae5cacdcdf6ca181c74c61be390ff7e85}\label{class_c_moving_object_ae5cacdcdf6ca181c74c61be390ff7e85}} 
+\index{CMovingObject@{CMovingObject}!init@{init}}
+\index{init@{init}!CMovingObject@{CMovingObject}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void CMoving\+Object\+::init (\begin{DoxyParamCaption}\item[{int}]{sprite\+Size,  }\item[{\mbox{\hyperlink{class_c_config}{CConfig}} $\ast$}]{setup }\end{DoxyParamCaption})}
+
+
+
+Initializing new moving object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Size} & Size of sprite \\
+\hline
+{\em setup} & Game\textquotesingle{}s configurations \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_moving_object_af306ba531bdea8932f99c7f80accea26}\label{class_c_moving_object_af306ba531bdea8932f99c7f80accea26}} 
+\index{CMovingObject@{CMovingObject}!move@{move}}
+\index{move@{move}!CMovingObject@{CMovingObject}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily virtual void CMoving\+Object\+::move (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{class_c_map}{CMap}} \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Moving an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & App\textquotesingle{}s renderer \\
+\hline
+{\em map} & Game\textquotesingle{}s map \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_c_ghost_a5c4ad475c7cd263638c0df84f50979c9}{CGhost}}, and \mbox{\hyperlink{class_c_pacman_a4ad96f77c40710f24e54667aab3e5931}{CPacman}}.
+
+\mbox{\Hypertarget{class_c_moving_object_af2c9d7c7ce167112b63e353b234f2df0}\label{class_c_moving_object_af2c9d7c7ce167112b63e353b234f2df0}} 
+\index{CMovingObject@{CMovingObject}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!CMovingObject@{CMovingObject}}
+\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
+{\footnotesize\ttfamily virtual void CMoving\+Object\+::set\+Direction (\begin{DoxyParamCaption}\item[{Direction}]{direction,  }\item[{\mbox{\hyperlink{class_c_map}{CMap}} \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Setting direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & New direction \\
+\hline
+{\em map} & Game\textquotesingle{}s map \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_c_ghost_a54bc2910c0ac301151ee15b93e6473fc}{CGhost}}, and \mbox{\hyperlink{class_c_pacman_a98dfee674375d113c7b7c72e5a860496}{CPacman}}.
+
+\mbox{\Hypertarget{class_c_moving_object_aba4b5e98d5e86ae405617eaebae49329}\label{class_c_moving_object_aba4b5e98d5e86ae405617eaebae49329}} 
+\index{CMovingObject@{CMovingObject}!setModelToDraw@{setModelToDraw}}
+\index{setModelToDraw@{setModelToDraw}!CMovingObject@{CMovingObject}}
+\doxysubsubsection{\texorpdfstring{setModelToDraw()}{setModelToDraw()}}
+{\footnotesize\ttfamily virtual void CMoving\+Object\+::set\+Model\+To\+Draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Rect \&}]{tmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Setting model to draw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmp} & Object\textquotesingle{}s rectangle \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_c_ghost_a63602381e60ed20af66cf506af193a57}{CGhost}}, and \mbox{\hyperlink{class_c_pacman_aa5688bfcb90b277931d543fd4ee133a4}{CPacman}}.
+
+\mbox{\Hypertarget{class_c_moving_object_a57cb2f4ab6484da46c1e673ad778686d}\label{class_c_moving_object_a57cb2f4ab6484da46c1e673ad778686d}} 
+\index{CMovingObject@{CMovingObject}!setSpeed@{setSpeed}}
+\index{setSpeed@{setSpeed}!CMovingObject@{CMovingObject}}
+\doxysubsubsection{\texorpdfstring{setSpeed()}{setSpeed()}}
+{\footnotesize\ttfamily void CMoving\+Object\+::set\+Speed (\begin{DoxyParamCaption}\item[{int}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setting sprite\textquotesingle{}s speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Sprite\textquotesingle{}s speed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_moving_object_ad829c77d767f0ec57efd7fce98daf109}\label{class_c_moving_object_ad829c77d767f0ec57efd7fce98daf109}} 
+\index{CMovingObject@{CMovingObject}!stepOnTeleport@{stepOnTeleport}}
+\index{stepOnTeleport@{stepOnTeleport}!CMovingObject@{CMovingObject}}
+\doxysubsubsection{\texorpdfstring{stepOnTeleport()}{stepOnTeleport()}}
+{\footnotesize\ttfamily bool CMoving\+Object\+::step\+On\+Teleport (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_map}{CMap}} \&}]{map }\end{DoxyParamCaption})}
+
+
+
+Solving teleports logic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & Game map \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returning boolean that shows if sprite has been teleported 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Object/\+Sprite/CMoving\+Object.\+h\item 
+src/\+Object/\+Sprite/CMoving\+Object.\+cpp\end{DoxyCompactItemize}

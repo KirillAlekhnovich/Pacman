@@ -1,0 +1,220 @@
+\hypertarget{class_c_tile_pos}{}\doxysection{CTile\+Pos Class Reference}
+\label{class_c_tile_pos}\index{CTilePos@{CTilePos}}
+
+
+Class for working with position.  
+
+
+
+
+{\ttfamily \#include $<$CTile\+Pos.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_tile_pos_a85ae4be58c0ec7a822bc0f91e71222a0}{CTile\+Pos}} (int x=0, int y=0)
+\begin{DoxyCompactList}\small\item\em Constructor for position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \mbox{\hyperlink{class_c_tile_pos_aeece16d90006cc2bdbc1479f1f82e356}{move}} (Direction \&direction, int speed)
+\begin{DoxyCompactList}\small\item\em Moving an object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_tile_pos_a1499091fb0a69eac2f8b2e73e97e699b}{opposite\+Direction}} (Direction \&dir1, Direction \&dir2) const
+\begin{DoxyCompactList}\small\item\em Check if directions are opposite or not. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_tile_pos_a0cb36d0ead501267960512d6c55fcb58}{operator==}} (const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Operator ==. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_tile_pos_a194f8a0729f6748cf3e51e3cd706e28f}{operator!=}} (const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Operator !=. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \mbox{\hyperlink{class_c_tile_pos_a12ba5cb62bb65afab87e9d6c8e49f7c0}{operator$\ast$}} (int index) const
+\begin{DoxyCompactList}\small\item\em Operator $\ast$. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \mbox{\hyperlink{class_c_tile_pos_af2ebe9b5001493739a31234700897bad}{operator+}} (int index) const
+\begin{DoxyCompactList}\small\item\em Operator +. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \& \mbox{\hyperlink{class_c_tile_pos_a1c72b7aec5a0e6e4aaf7d5375e5728b3}{operator=}} (\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} new\+Position)
+\begin{DoxyCompactList}\small\item\em Operator =. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \mbox{\hyperlink{class_c_tile_pos_a39cf92d626699ebd3758d61fc11927f5}{operator/}} (int index) const
+\begin{DoxyCompactList}\small\item\em Operator /. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_tile_pos_a1ac3c4e437ab0966cb945ef6188f6bbc}\label{class_c_tile_pos_a1ac3c4e437ab0966cb945ef6188f6bbc}} 
+int {\bfseries x}
+\item 
+\mbox{\Hypertarget{class_c_tile_pos_af903350ab94c827bbfd1dd3920c084a1}\label{class_c_tile_pos_af903350ab94c827bbfd1dd3920c084a1}} 
+int {\bfseries y}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for working with position. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_tile_pos_a85ae4be58c0ec7a822bc0f91e71222a0}\label{class_c_tile_pos_a85ae4be58c0ec7a822bc0f91e71222a0}} 
+\index{CTilePos@{CTilePos}!CTilePos@{CTilePos}}
+\index{CTilePos@{CTilePos}!CTilePos@{CTilePos}}
+\doxysubsubsection{\texorpdfstring{CTilePos()}{CTilePos()}}
+{\footnotesize\ttfamily CTile\+Pos\+::\+CTile\+Pos (\begin{DoxyParamCaption}\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Dimension x \\
+\hline
+{\em y} & Dimension y \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_tile_pos_aeece16d90006cc2bdbc1479f1f82e356}\label{class_c_tile_pos_aeece16d90006cc2bdbc1479f1f82e356}} 
+\index{CTilePos@{CTilePos}!move@{move}}
+\index{move@{move}!CTilePos@{CTilePos}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} CTile\+Pos\+::move (\begin{DoxyParamCaption}\item[{Direction \&}]{direction,  }\item[{int}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Moving an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Current object\textquotesingle{}s direction \\
+\hline
+{\em speed} & Object\textquotesingle{}s speed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New object\textquotesingle{}s position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_tile_pos_a194f8a0729f6748cf3e51e3cd706e28f}\label{class_c_tile_pos_a194f8a0729f6748cf3e51e3cd706e28f}} 
+\index{CTilePos@{CTilePos}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!CTilePos@{CTilePos}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool CTile\+Pos\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator !=. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Right side \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Positions inequality 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_tile_pos_a12ba5cb62bb65afab87e9d6c8e49f7c0}\label{class_c_tile_pos_a12ba5cb62bb65afab87e9d6c8e49f7c0}} 
+\index{CTilePos@{CTilePos}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!CTilePos@{CTilePos}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} CTile\+Pos\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator $\ast$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Position multiplier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_tile_pos_af2ebe9b5001493739a31234700897bad}\label{class_c_tile_pos_af2ebe9b5001493739a31234700897bad}} 
+\index{CTilePos@{CTilePos}!operator+@{operator+}}
+\index{operator+@{operator+}!CTilePos@{CTilePos}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} CTile\+Pos\+::operator+ (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator +. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Number that has to be added to position dimensions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_tile_pos_a39cf92d626699ebd3758d61fc11927f5}\label{class_c_tile_pos_a39cf92d626699ebd3758d61fc11927f5}} 
+\index{CTilePos@{CTilePos}!operator/@{operator/}}
+\index{operator/@{operator/}!CTilePos@{CTilePos}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} CTile\+Pos\+::operator/ (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator /. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Divider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_tile_pos_a1c72b7aec5a0e6e4aaf7d5375e5728b3}\label{class_c_tile_pos_a1c72b7aec5a0e6e4aaf7d5375e5728b3}} 
+\index{CTilePos@{CTilePos}!operator=@{operator=}}
+\index{operator=@{operator=}!CTilePos@{CTilePos}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}}\& CTile\+Pos\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}}}]{new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator =. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & New position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Assigned position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_tile_pos_a0cb36d0ead501267960512d6c55fcb58}\label{class_c_tile_pos_a0cb36d0ead501267960512d6c55fcb58}} 
+\index{CTilePos@{CTilePos}!operator==@{operator==}}
+\index{operator==@{operator==}!CTilePos@{CTilePos}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool CTile\+Pos\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator ==. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Right side \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Position\textquotesingle{}s equality 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_tile_pos_a1499091fb0a69eac2f8b2e73e97e699b}\label{class_c_tile_pos_a1499091fb0a69eac2f8b2e73e97e699b}} 
+\index{CTilePos@{CTilePos}!oppositeDirection@{oppositeDirection}}
+\index{oppositeDirection@{oppositeDirection}!CTilePos@{CTilePos}}
+\doxysubsubsection{\texorpdfstring{oppositeDirection()}{oppositeDirection()}}
+{\footnotesize\ttfamily bool CTile\+Pos\+::opposite\+Direction (\begin{DoxyParamCaption}\item[{Direction \&}]{dir1,  }\item[{Direction \&}]{dir2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if directions are opposite or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir1} & First direction \\
+\hline
+{\em dir2} & Second direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean variable, that shows if directions are opposite or not 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Object/CTile\+Pos.\+h\end{DoxyCompactItemize}

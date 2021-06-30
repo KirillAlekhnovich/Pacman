@@ -1,0 +1,437 @@
+\hypertarget{class_c_ghost}{}\doxysection{CGhost Class Reference}
+\label{class_c_ghost}\index{CGhost@{CGhost}}
+
+
+Ghosts logic.  
+
+
+
+
+{\ttfamily \#include $<$CGhost.\+h$>$}
+
+Inheritance diagram for CGhost\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_c_ghost}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_ghost_a616e1a522e9be6731da6800039b93e88}{CGhost}} (bool prisoned)
+\begin{DoxyCompactList}\small\item\em Constructor for ghost. \end{DoxyCompactList}\item 
+Direction \mbox{\hyperlink{class_c_ghost_a3d9569b20fe3e0302b628c73ec3f6e73}{change\+Direction}} (\mbox{\hyperlink{class_c_map}{CMap}} \&map)
+\begin{DoxyCompactList}\small\item\em Changing ghost\textquotesingle{}s direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_ghost_a5c4ad475c7cd263638c0df84f50979c9}{move}} (SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{class_c_map}{CMap}} \&map) override
+\begin{DoxyCompactList}\small\item\em Moving a ghost. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_ghost_ad782475581a057883c8eabd8b4d86ff7}{intersection\+Check}} (\mbox{\hyperlink{class_c_map}{CMap}} \&map) const
+\begin{DoxyCompactList}\small\item\em Checking if ghost is at intersection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_ghost_a63602381e60ed20af66cf506af193a57}{set\+Model\+To\+Draw}} (SDL\+\_\+\+Rect \&tmp) override
+\begin{DoxyCompactList}\small\item\em Setting ghost\textquotesingle{}s model depending on game mode and timers. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_c_ghost_ad73eed92eeb73ba6e348a8c4599385d4}{reset}} (\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} target)
+\begin{DoxyCompactList}\small\item\em Resetting ghost\textquotesingle{}s speed, position and destination. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \mbox{\hyperlink{class_c_ghost_ae1150fde13a4e042a1bb554c7ca70cae}{calc\+Destination}} (const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \&pacman\+Pos, Direction pacman\+Dir)=0
+\begin{DoxyCompactList}\small\item\em Calculating destination. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_ghost_a3417052535c57b5a95be08d8df6e66f8}{set\+Destination}} (\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} pos)
+\begin{DoxyCompactList}\small\item\em Setting new destination. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_ghost_ab8756a9e17575def8ec03ebe64d91fa6}{set\+Game\+Mode}} (Game\+Mode $\ast$mode)
+\begin{DoxyCompactList}\small\item\em Setting game mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_ghost_ac76e0474cfe6dba9c606d70fca1cc4f7}{set\+Prisoned}} (bool p)
+\begin{DoxyCompactList}\small\item\em Setting prisoned status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_ghost_a1b74396e540917031b53074a17017d0e}{set\+Prisoned\+Timer}} (int p\+Timer)
+\begin{DoxyCompactList}\small\item\em Setting prisoned timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_ghost_a2b9ad2efb339a384547e6b9ea0d8f60f}{set\+Frightened\+Timer}} (int f\+Timer)
+\begin{DoxyCompactList}\small\item\em Setting frightened timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_ghost_a85d5447fcb6437b899800ed98db651fa}{set\+In\+Gates}} (bool gates)
+\begin{DoxyCompactList}\small\item\em Setting ghost and gates status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_ghost_a34315c73fc512d5d635c96c7a2dcc997}{set\+Starting\+Pos}} (const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \&s)
+\begin{DoxyCompactList}\small\item\em Setting starting position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_ghost_a54bc2910c0ac301151ee15b93e6473fc}{set\+Direction}} (Direction direction, \mbox{\hyperlink{class_c_map}{CMap}} \&map) override
+\begin{DoxyCompactList}\small\item\em Setting direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_ghost_a32225f9985f4c53f1f30779c464acf12}{is\+Prisoned}} () const
+\begin{DoxyCompactList}\small\item\em Is ghost prisoned or not. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_c_ghost_ab45998e17531730c1281553837bd872c}{get\+Prisoned\+Timer}} () const
+\begin{DoxyCompactList}\small\item\em Getting prisoned timer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_ghost_a9fa1cc6232c88e22549034e71429fe6d}{is\+In\+Gates}} () const
+\begin{DoxyCompactList}\small\item\em Ghost and gates status. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \& \mbox{\hyperlink{class_c_ghost_a5ebef6de8caa76ebede279ac88615e32}{get\+Starting\+Pos}} () const
+\begin{DoxyCompactList}\small\item\em Getting starting position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_c_ghost_a21589901ecd7be1780e8bda827a98207}{calculate\+Hypotenuse}} (\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} current, \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} dest)
+\begin{DoxyCompactList}\small\item\em Finding hypotenuse to calculate closest way. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_ghost_a171fc0debcf469d24143c548a45368be}\label{class_c_ghost_a171fc0debcf469d24143c548a45368be}} 
+\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} {\bfseries destination}
+\item 
+\mbox{\Hypertarget{class_c_ghost_a02995596499eb522a7f1ef100cfd14d1}\label{class_c_ghost_a02995596499eb522a7f1ef100cfd14d1}} 
+\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} {\bfseries new\+Position}
+\item 
+\mbox{\Hypertarget{class_c_ghost_a0917e6160976d8a131dd0d8116d19795}\label{class_c_ghost_a0917e6160976d8a131dd0d8116d19795}} 
+Game\+Mode $\ast$ {\bfseries game\+Mode} \{\}
+\item 
+\mbox{\Hypertarget{class_c_ghost_a24cf7dde5fc24c3f4a5d02dfb682a780}\label{class_c_ghost_a24cf7dde5fc24c3f4a5d02dfb682a780}} 
+int {\bfseries frightened\+Timer} = 0
+\item 
+\mbox{\Hypertarget{class_c_ghost_a3456ca2dd3a9aa8ac0169923ad58a2cc}\label{class_c_ghost_a3456ca2dd3a9aa8ac0169923ad58a2cc}} 
+int {\bfseries prisoned\+Timer} = 0
+\item 
+\mbox{\Hypertarget{class_c_ghost_a631f2e52181a7affb7ef07b21d1bc025}\label{class_c_ghost_a631f2e52181a7affb7ef07b21d1bc025}} 
+bool {\bfseries prisoned}
+\item 
+\mbox{\Hypertarget{class_c_ghost_a57e45685d469b6ae0aa2517faaae3ed0}\label{class_c_ghost_a57e45685d469b6ae0aa2517faaae3ed0}} 
+bool {\bfseries in\+Gates}
+\item 
+\mbox{\Hypertarget{class_c_ghost_a21c4ede3ab1b0fe46db861c5f6d830c3}\label{class_c_ghost_a21c4ede3ab1b0fe46db861c5f6d830c3}} 
+\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} {\bfseries starting\+Pos}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ghosts logic. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_ghost_a616e1a522e9be6731da6800039b93e88}\label{class_c_ghost_a616e1a522e9be6731da6800039b93e88}} 
+\index{CGhost@{CGhost}!CGhost@{CGhost}}
+\index{CGhost@{CGhost}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{CGhost()}{CGhost()}}
+{\footnotesize\ttfamily CGhost\+::\+CGhost (\begin{DoxyParamCaption}\item[{bool}]{prisoned }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor for ghost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prisoned} & Parameter that shows if ghost is detained or not \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_ghost_ae1150fde13a4e042a1bb554c7ca70cae}\label{class_c_ghost_ae1150fde13a4e042a1bb554c7ca70cae}} 
+\index{CGhost@{CGhost}!calcDestination@{calcDestination}}
+\index{calcDestination@{calcDestination}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{calcDestination()}{calcDestination()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} CGhost\+::calc\+Destination (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \&}]{pacman\+Pos,  }\item[{Direction}]{pacman\+Dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculating destination. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pacman\+Pos} & Pacman position \\
+\hline
+{\em pacman\+Dir} & Pacman direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Calculating ghost\textquotesingle{}s target 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_c_blue_a90068a8fe6be9f933b42b799dff45693}{CBlue}}, \mbox{\hyperlink{class_c_orange_a9c6c22f231bd0c6a18f0d9f860dd15cb}{COrange}}, \mbox{\hyperlink{class_c_pink_a02eec519869d5e37d27d496f77135b5e}{CPink}}, and \mbox{\hyperlink{class_c_red_a84c0b7c48d0a75194546d66748473eb4}{CRed}}.
+
+\mbox{\Hypertarget{class_c_ghost_a21589901ecd7be1780e8bda827a98207}\label{class_c_ghost_a21589901ecd7be1780e8bda827a98207}} 
+\index{CGhost@{CGhost}!calculateHypotenuse@{calculateHypotenuse}}
+\index{calculateHypotenuse@{calculateHypotenuse}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{calculateHypotenuse()}{calculateHypotenuse()}}
+{\footnotesize\ttfamily int CGhost\+::calculate\+Hypotenuse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}}}]{current,  }\item[{\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}}}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finding hypotenuse to calculate closest way. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & Current tile \\
+\hline
+{\em dest} & Destination tile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returning distance between ghost and it\textquotesingle{}s destination 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_ghost_a3d9569b20fe3e0302b628c73ec3f6e73}\label{class_c_ghost_a3d9569b20fe3e0302b628c73ec3f6e73}} 
+\index{CGhost@{CGhost}!changeDirection@{changeDirection}}
+\index{changeDirection@{changeDirection}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{changeDirection()}{changeDirection()}}
+{\footnotesize\ttfamily Direction CGhost\+::change\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_map}{CMap}} \&}]{map }\end{DoxyParamCaption})}
+
+
+
+Changing ghost\textquotesingle{}s direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & Game map \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returning new direction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_ghost_ab45998e17531730c1281553837bd872c}\label{class_c_ghost_ab45998e17531730c1281553837bd872c}} 
+\index{CGhost@{CGhost}!getPrisonedTimer@{getPrisonedTimer}}
+\index{getPrisonedTimer@{getPrisonedTimer}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{getPrisonedTimer()}{getPrisonedTimer()}}
+{\footnotesize\ttfamily int CGhost\+::get\+Prisoned\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getting prisoned timer. 
+
+\begin{DoxyReturn}{Returns}
+Prisoned timer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_ghost_a5ebef6de8caa76ebede279ac88615e32}\label{class_c_ghost_a5ebef6de8caa76ebede279ac88615e32}} 
+\index{CGhost@{CGhost}!getStartingPos@{getStartingPos}}
+\index{getStartingPos@{getStartingPos}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{getStartingPos()}{getStartingPos()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}}\& CGhost\+::get\+Starting\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getting starting position. 
+
+\begin{DoxyReturn}{Returns}
+Starting position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_ghost_ad782475581a057883c8eabd8b4d86ff7}\label{class_c_ghost_ad782475581a057883c8eabd8b4d86ff7}} 
+\index{CGhost@{CGhost}!intersectionCheck@{intersectionCheck}}
+\index{intersectionCheck@{intersectionCheck}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{intersectionCheck()}{intersectionCheck()}}
+{\footnotesize\ttfamily bool CGhost\+::intersection\+Check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_map}{CMap}} \&}]{map }\end{DoxyParamCaption}) const}
+
+
+
+Checking if ghost is at intersection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & Game map \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If ghost is at intersection -\/ return true, else -\/ false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_ghost_a9fa1cc6232c88e22549034e71429fe6d}\label{class_c_ghost_a9fa1cc6232c88e22549034e71429fe6d}} 
+\index{CGhost@{CGhost}!isInGates@{isInGates}}
+\index{isInGates@{isInGates}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{isInGates()}{isInGates()}}
+{\footnotesize\ttfamily bool CGhost\+::is\+In\+Gates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ghost and gates status. 
+
+\begin{DoxyReturn}{Returns}
+Boolean that shows if ghost is in gates or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_ghost_a32225f9985f4c53f1f30779c464acf12}\label{class_c_ghost_a32225f9985f4c53f1f30779c464acf12}} 
+\index{CGhost@{CGhost}!isPrisoned@{isPrisoned}}
+\index{isPrisoned@{isPrisoned}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{isPrisoned()}{isPrisoned()}}
+{\footnotesize\ttfamily bool CGhost\+::is\+Prisoned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Is ghost prisoned or not. 
+
+\begin{DoxyReturn}{Returns}
+Boolean variable representing prisoned status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_ghost_a5c4ad475c7cd263638c0df84f50979c9}\label{class_c_ghost_a5c4ad475c7cd263638c0df84f50979c9}} 
+\index{CGhost@{CGhost}!move@{move}}
+\index{move@{move}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void CGhost\+::move (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{class_c_map}{CMap}} \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Moving a ghost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & App\textquotesingle{}s renderer \\
+\hline
+{\em map} & Game map \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_moving_object_af306ba531bdea8932f99c7f80accea26}{CMoving\+Object}}.
+
+\mbox{\Hypertarget{class_c_ghost_ad73eed92eeb73ba6e348a8c4599385d4}\label{class_c_ghost_ad73eed92eeb73ba6e348a8c4599385d4}} 
+\index{CGhost@{CGhost}!reset@{reset}}
+\index{reset@{reset}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void CGhost\+::reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}}}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resetting ghost\textquotesingle{}s speed, position and destination. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & New ghost\textquotesingle{}s target \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_red_a047af75a52b60ccb0aee5917be7ff23d}{CRed}}.
+
+\mbox{\Hypertarget{class_c_ghost_a3417052535c57b5a95be08d8df6e66f8}\label{class_c_ghost_a3417052535c57b5a95be08d8df6e66f8}} 
+\index{CGhost@{CGhost}!setDestination@{setDestination}}
+\index{setDestination@{setDestination}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{setDestination()}{setDestination()}}
+{\footnotesize\ttfamily void CGhost\+::set\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setting new destination. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Target \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_ghost_a54bc2910c0ac301151ee15b93e6473fc}\label{class_c_ghost_a54bc2910c0ac301151ee15b93e6473fc}} 
+\index{CGhost@{CGhost}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
+{\footnotesize\ttfamily void CGhost\+::set\+Direction (\begin{DoxyParamCaption}\item[{Direction}]{direction,  }\item[{\mbox{\hyperlink{class_c_map}{CMap}} \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Setting direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & New direction \\
+\hline
+{\em map} & Game map \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_moving_object_af2c9d7c7ce167112b63e353b234f2df0}{CMoving\+Object}}.
+
+\mbox{\Hypertarget{class_c_ghost_a2b9ad2efb339a384547e6b9ea0d8f60f}\label{class_c_ghost_a2b9ad2efb339a384547e6b9ea0d8f60f}} 
+\index{CGhost@{CGhost}!setFrightenedTimer@{setFrightenedTimer}}
+\index{setFrightenedTimer@{setFrightenedTimer}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{setFrightenedTimer()}{setFrightenedTimer()}}
+{\footnotesize\ttfamily void CGhost\+::set\+Frightened\+Timer (\begin{DoxyParamCaption}\item[{int}]{f\+Timer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setting frightened timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f\+Timer} & Frightened timer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_ghost_ab8756a9e17575def8ec03ebe64d91fa6}\label{class_c_ghost_ab8756a9e17575def8ec03ebe64d91fa6}} 
+\index{CGhost@{CGhost}!setGameMode@{setGameMode}}
+\index{setGameMode@{setGameMode}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{setGameMode()}{setGameMode()}}
+{\footnotesize\ttfamily void CGhost\+::set\+Game\+Mode (\begin{DoxyParamCaption}\item[{Game\+Mode $\ast$}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setting game mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Game mode \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_ghost_a85d5447fcb6437b899800ed98db651fa}\label{class_c_ghost_a85d5447fcb6437b899800ed98db651fa}} 
+\index{CGhost@{CGhost}!setInGates@{setInGates}}
+\index{setInGates@{setInGates}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{setInGates()}{setInGates()}}
+{\footnotesize\ttfamily void CGhost\+::set\+In\+Gates (\begin{DoxyParamCaption}\item[{bool}]{gates }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setting ghost and gates status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gates} & Boolean that shows is ghost in gates or not \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_ghost_a63602381e60ed20af66cf506af193a57}\label{class_c_ghost_a63602381e60ed20af66cf506af193a57}} 
+\index{CGhost@{CGhost}!setModelToDraw@{setModelToDraw}}
+\index{setModelToDraw@{setModelToDraw}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{setModelToDraw()}{setModelToDraw()}}
+{\footnotesize\ttfamily void CGhost\+::set\+Model\+To\+Draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Rect \&}]{tmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Setting ghost\textquotesingle{}s model depending on game mode and timers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmp} & Ghost\textquotesingle{}s rectangle \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_moving_object_aba4b5e98d5e86ae405617eaebae49329}{CMoving\+Object}}.
+
+\mbox{\Hypertarget{class_c_ghost_ac76e0474cfe6dba9c606d70fca1cc4f7}\label{class_c_ghost_ac76e0474cfe6dba9c606d70fca1cc4f7}} 
+\index{CGhost@{CGhost}!setPrisoned@{setPrisoned}}
+\index{setPrisoned@{setPrisoned}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{setPrisoned()}{setPrisoned()}}
+{\footnotesize\ttfamily void CGhost\+::set\+Prisoned (\begin{DoxyParamCaption}\item[{bool}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setting prisoned status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Prisoned \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_ghost_a1b74396e540917031b53074a17017d0e}\label{class_c_ghost_a1b74396e540917031b53074a17017d0e}} 
+\index{CGhost@{CGhost}!setPrisonedTimer@{setPrisonedTimer}}
+\index{setPrisonedTimer@{setPrisonedTimer}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{setPrisonedTimer()}{setPrisonedTimer()}}
+{\footnotesize\ttfamily void CGhost\+::set\+Prisoned\+Timer (\begin{DoxyParamCaption}\item[{int}]{p\+Timer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setting prisoned timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Timer} & Prisoned timer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_ghost_a34315c73fc512d5d635c96c7a2dcc997}\label{class_c_ghost_a34315c73fc512d5d635c96c7a2dcc997}} 
+\index{CGhost@{CGhost}!setStartingPos@{setStartingPos}}
+\index{setStartingPos@{setStartingPos}!CGhost@{CGhost}}
+\doxysubsubsection{\texorpdfstring{setStartingPos()}{setStartingPos()}}
+{\footnotesize\ttfamily void CGhost\+::set\+Starting\+Pos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setting starting position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Starting position \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Object/\+Sprite/\+Ghost/CGhost.\+h\item 
+src/\+Object/\+Sprite/\+Ghost/CGhost.\+cpp\end{DoxyCompactItemize}

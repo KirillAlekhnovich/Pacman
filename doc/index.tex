@@ -1,0 +1,26 @@
+\label{index_md_examples_README}%
+\Hypertarget{index_md_examples_README}%
+
+\begin{DoxyItemize}
+\item Autor\+: Kirill Alekhnovich (alekhkir)
+\end{DoxyItemize}\hypertarget{index_autotoc_md1}{}\doxysection{Základní funkcionality}\label{index_autotoc_md1}
+
+\begin{DoxyEnumerate}
+\item Dodržování základních pravidel, sbírání bonusů, míncí (teček), třešniček, teleporty, atp.
+\item Je implementováno několik druhů AI duchů (fungující i zároveň -\/ např. duchové se liší barvou, znakem).
+\item Lze načítat mapy ze souboru (bludiště + pozice bonusů a duchů).
+\item Konfigurovatelná obtížnost hry ze souboru (rychlost duchů, délka trvání jednotlivých módů hry, pravděpodobnost přidání nového bonusu do mapy, ...)
+\item Škálovatelná obtížnost duchů (více strategií duchů dle obtížnost, dle různého chování)
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md2}{}\doxysection{Pokročilé funkcionality}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Hra obsahuje hlavní menu a menu po hře.
+\item Během hry se vypisuje počet bodů.
+\item Hra pamatuje největší dosažený počet bodů.
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysection{Využití polymorfismu}\label{index_autotoc_md3}
+
+\begin{DoxyEnumerate}
+\item Moving objekty. Každý moving objekt (duch, pacman) může se pochybovat. Ale každý to dělá jinak, a proto můžeme využít tady polymorfismus.
+\item Přízraky. Duchové mají zcela podobné chování, ale jsou i věci které se u nich liší (například mají různé cíle na mapě).
+\item Bonusy. Každý bonus by měl dávat Pacmanu různý počet bodů. 
+\end{DoxyEnumerate}

@@ -1,0 +1,111 @@
+\hypertarget{class_c_orange}{}\doxysection{COrange Class Reference}
+\label{class_c_orange}\index{COrange@{COrange}}
+
+
+Orange ghost.  
+
+
+
+
+{\ttfamily \#include $<$COrange.\+h$>$}
+
+Inheritance diagram for COrange\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_c_orange}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_orange_ad222290ddc85768cbfc8492a1c649878}\label{class_c_orange_ad222290ddc85768cbfc8492a1c649878}} 
+\mbox{\hyperlink{class_c_orange_ad222290ddc85768cbfc8492a1c649878}{COrange}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for orange ghost. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_orange_a4605aafb4a2c03e34b8568b366b0139e}{scared\+Detection}} (\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} pacman\+Pos)
+\begin{DoxyCompactList}\small\item\em Setting if orange should be scared or not. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \mbox{\hyperlink{class_c_orange_a9c6c22f231bd0c6a18f0d9f860dd15cb}{calc\+Destination}} (const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \&pacman\+Pos, Direction pacman\+Dir) override
+\begin{DoxyCompactList}\small\item\em Calculation target for orange ghost. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_orange_a08907dc4db7e93abdd9deee276ffaf70}{set\+Scared}} (bool s)
+\begin{DoxyCompactList}\small\item\em Setting scared boolean. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_orange_aa7481d2c8f06acf1c13fa026b85446b6}{is\+Scared}} () const
+\begin{DoxyCompactList}\small\item\em Getting scared boolean. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Orange ghost. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_orange_a9c6c22f231bd0c6a18f0d9f860dd15cb}\label{class_c_orange_a9c6c22f231bd0c6a18f0d9f860dd15cb}} 
+\index{COrange@{COrange}!calcDestination@{calcDestination}}
+\index{calcDestination@{calcDestination}!COrange@{COrange}}
+\doxysubsubsection{\texorpdfstring{calcDestination()}{calcDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} COrange\+::calc\+Destination (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \&}]{pacman\+Pos,  }\item[{Direction}]{pacman\+Dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculation target for orange ghost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pacman\+Pos} & Pacman position \\
+\hline
+{\em pacman\+Dir} & Pacman direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returning orange\textquotesingle{}s destination 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_c_ghost_ae1150fde13a4e042a1bb554c7ca70cae}{CGhost}}.
+
+\mbox{\Hypertarget{class_c_orange_aa7481d2c8f06acf1c13fa026b85446b6}\label{class_c_orange_aa7481d2c8f06acf1c13fa026b85446b6}} 
+\index{COrange@{COrange}!isScared@{isScared}}
+\index{isScared@{isScared}!COrange@{COrange}}
+\doxysubsubsection{\texorpdfstring{isScared()}{isScared()}}
+{\footnotesize\ttfamily bool COrange\+::is\+Scared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getting scared boolean. 
+
+\begin{DoxyReturn}{Returns}
+Scared or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_orange_a4605aafb4a2c03e34b8568b366b0139e}\label{class_c_orange_a4605aafb4a2c03e34b8568b366b0139e}} 
+\index{COrange@{COrange}!scaredDetection@{scaredDetection}}
+\index{scaredDetection@{scaredDetection}!COrange@{COrange}}
+\doxysubsubsection{\texorpdfstring{scaredDetection()}{scaredDetection()}}
+{\footnotesize\ttfamily void COrange\+::scared\+Detection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}}}]{pacman\+Pos }\end{DoxyParamCaption})}
+
+
+
+Setting if orange should be scared or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pacman\+Pos} & Pacman position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_orange_a08907dc4db7e93abdd9deee276ffaf70}\label{class_c_orange_a08907dc4db7e93abdd9deee276ffaf70}} 
+\index{COrange@{COrange}!setScared@{setScared}}
+\index{setScared@{setScared}!COrange@{COrange}}
+\doxysubsubsection{\texorpdfstring{setScared()}{setScared()}}
+{\footnotesize\ttfamily void COrange\+::set\+Scared (\begin{DoxyParamCaption}\item[{bool}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setting scared boolean. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Scared \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Object/\+Sprite/\+Ghost/COrange.\+h\item 
+src/\+Object/\+Sprite/\+Ghost/COrange.\+cpp\end{DoxyCompactItemize}

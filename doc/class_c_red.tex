@@ -1,0 +1,83 @@
+\hypertarget{class_c_red}{}\doxysection{CRed Class Reference}
+\label{class_c_red}\index{CRed@{CRed}}
+
+
+Red ghost.  
+
+
+
+
+{\ttfamily \#include $<$CRed.\+h$>$}
+
+Inheritance diagram for CRed\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_c_red}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_red_afdd0bdc53403847ecb8de82efe7c383d}\label{class_c_red_afdd0bdc53403847ecb8de82efe7c383d}} 
+\mbox{\hyperlink{class_c_red_afdd0bdc53403847ecb8de82efe7c383d}{CRed}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for red ghost. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_red_a047af75a52b60ccb0aee5917be7ff23d}{reset}} (\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} target) override
+\begin{DoxyCompactList}\small\item\em Resetting red\textquotesingle{}s position and speed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \mbox{\hyperlink{class_c_red_a84c0b7c48d0a75194546d66748473eb4}{calc\+Destination}} (const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \&pacman\+Pos, Direction pacman\+Dir) override
+\begin{DoxyCompactList}\small\item\em Calculation target for red ghost. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Red ghost. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_red_a84c0b7c48d0a75194546d66748473eb4}\label{class_c_red_a84c0b7c48d0a75194546d66748473eb4}} 
+\index{CRed@{CRed}!calcDestination@{calcDestination}}
+\index{calcDestination@{calcDestination}!CRed@{CRed}}
+\doxysubsubsection{\texorpdfstring{calcDestination()}{calcDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} CRed\+::calc\+Destination (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}} \&}]{pacman\+Pos,  }\item[{Direction}]{pacman\+Dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculation target for red ghost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pacman\+Pos} & Pacman position \\
+\hline
+{\em pacman\+Dir} & Pacman direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returning red\textquotesingle{}s destination 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_c_ghost_ae1150fde13a4e042a1bb554c7ca70cae}{CGhost}}.
+
+\mbox{\Hypertarget{class_c_red_a047af75a52b60ccb0aee5917be7ff23d}\label{class_c_red_a047af75a52b60ccb0aee5917be7ff23d}} 
+\index{CRed@{CRed}!reset@{reset}}
+\index{reset@{reset}!CRed@{CRed}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void CRed\+::reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_tile_pos}{CTile\+Pos}}}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resetting red\textquotesingle{}s position and speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Red\textquotesingle{}s target \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_ghost_ad73eed92eeb73ba6e348a8c4599385d4}{CGhost}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Object/\+Sprite/\+Ghost/CRed.\+h\item 
+src/\+Object/\+Sprite/\+Ghost/CRed.\+cpp\end{DoxyCompactItemize}

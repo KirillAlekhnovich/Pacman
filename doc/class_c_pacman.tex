@@ -1,0 +1,175 @@
+\hypertarget{class_c_pacman}{}\doxysection{CPacman Class Reference}
+\label{class_c_pacman}\index{CPacman@{CPacman}}
+
+
+Pacman behaviour.  
+
+
+
+
+{\ttfamily \#include $<$CPacman.\+h$>$}
+
+Inheritance diagram for CPacman\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_c_pacman}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_pacman_a989f24eb304dd56ccaab90dd44636fb9}\label{class_c_pacman_a989f24eb304dd56ccaab90dd44636fb9}} 
+\mbox{\hyperlink{class_c_pacman_a989f24eb304dd56ccaab90dd44636fb9}{CPacman}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for Pacman. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_pacman_af957dadcb282b6c82132f8be6516d3dd}{wall\+Collision}} (\mbox{\hyperlink{class_c_map}{CMap}} \&map)
+\begin{DoxyCompactList}\small\item\em Checking collision with walls. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_c_pacman_a45ab4c55103b4bfbf4fad90cbdee50b4}{food\+Collision}} (\mbox{\hyperlink{class_c_map}{CMap}} \&map) const
+\begin{DoxyCompactList}\small\item\em Eating bonuses. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_pacman_a4ad96f77c40710f24e54667aab3e5931}{move}} (SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{class_c_map}{CMap}} \&map) override
+\begin{DoxyCompactList}\small\item\em Moving Pacman on the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_pacman_aa5688bfcb90b277931d543fd4ee133a4}{set\+Model\+To\+Draw}} (SDL\+\_\+\+Rect \&tmp) override
+\begin{DoxyCompactList}\small\item\em Setting Pacman\textquotesingle{}s model depending on mode and timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_pacman_a98dfee674375d113c7b7c72e5a860496}{set\+Direction}} (Direction direction, \mbox{\hyperlink{class_c_map}{CMap}} \&map) override
+\begin{DoxyCompactList}\small\item\em Setting Pacman\textquotesingle{}s direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_pacman_a31ada8fa05f06b20fd04a343ed3bd877}{pre\+Declared\+Solver}} (\mbox{\hyperlink{class_c_map}{CMap}} \&map)
+\begin{DoxyCompactList}\small\item\em Solving predeclared direction and changing current direction if necessary. \end{DoxyCompactList}\item 
+Direction \mbox{\hyperlink{class_c_pacman_abb4ae95bee7d54e6c34c44a15a4262d9}{get\+Current\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Getting current direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Pacman behaviour. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_pacman_a45ab4c55103b4bfbf4fad90cbdee50b4}\label{class_c_pacman_a45ab4c55103b4bfbf4fad90cbdee50b4}} 
+\index{CPacman@{CPacman}!foodCollision@{foodCollision}}
+\index{foodCollision@{foodCollision}!CPacman@{CPacman}}
+\doxysubsubsection{\texorpdfstring{foodCollision()}{foodCollision()}}
+{\footnotesize\ttfamily int CPacman\+::food\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_map}{CMap}} \&}]{map }\end{DoxyParamCaption}) const}
+
+
+
+Eating bonuses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & Game\textquotesingle{}s map \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of points that have to be given to player 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_pacman_abb4ae95bee7d54e6c34c44a15a4262d9}\label{class_c_pacman_abb4ae95bee7d54e6c34c44a15a4262d9}} 
+\index{CPacman@{CPacman}!getCurrentDirection@{getCurrentDirection}}
+\index{getCurrentDirection@{getCurrentDirection}!CPacman@{CPacman}}
+\doxysubsubsection{\texorpdfstring{getCurrentDirection()}{getCurrentDirection()}}
+{\footnotesize\ttfamily Direction CPacman\+::get\+Current\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getting current direction. 
+
+\begin{DoxyReturn}{Returns}
+Current direction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_pacman_a4ad96f77c40710f24e54667aab3e5931}\label{class_c_pacman_a4ad96f77c40710f24e54667aab3e5931}} 
+\index{CPacman@{CPacman}!move@{move}}
+\index{move@{move}!CPacman@{CPacman}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void CPacman\+::move (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{class_c_map}{CMap}} \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Moving Pacman on the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & App\textquotesingle{}s renderer \\
+\hline
+{\em map} & Game\textquotesingle{}s map \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_moving_object_af306ba531bdea8932f99c7f80accea26}{CMoving\+Object}}.
+
+\mbox{\Hypertarget{class_c_pacman_a31ada8fa05f06b20fd04a343ed3bd877}\label{class_c_pacman_a31ada8fa05f06b20fd04a343ed3bd877}} 
+\index{CPacman@{CPacman}!preDeclaredSolver@{preDeclaredSolver}}
+\index{preDeclaredSolver@{preDeclaredSolver}!CPacman@{CPacman}}
+\doxysubsubsection{\texorpdfstring{preDeclaredSolver()}{preDeclaredSolver()}}
+{\footnotesize\ttfamily void CPacman\+::pre\+Declared\+Solver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_map}{CMap}} \&}]{map }\end{DoxyParamCaption})}
+
+
+
+Solving predeclared direction and changing current direction if necessary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & Game\textquotesingle{}s map \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_pacman_a98dfee674375d113c7b7c72e5a860496}\label{class_c_pacman_a98dfee674375d113c7b7c72e5a860496}} 
+\index{CPacman@{CPacman}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!CPacman@{CPacman}}
+\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
+{\footnotesize\ttfamily void CPacman\+::set\+Direction (\begin{DoxyParamCaption}\item[{Direction}]{direction,  }\item[{\mbox{\hyperlink{class_c_map}{CMap}} \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Setting Pacman\textquotesingle{}s direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & New direction \\
+\hline
+{\em map} & Game\textquotesingle{}s map \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_moving_object_af2c9d7c7ce167112b63e353b234f2df0}{CMoving\+Object}}.
+
+\mbox{\Hypertarget{class_c_pacman_aa5688bfcb90b277931d543fd4ee133a4}\label{class_c_pacman_aa5688bfcb90b277931d543fd4ee133a4}} 
+\index{CPacman@{CPacman}!setModelToDraw@{setModelToDraw}}
+\index{setModelToDraw@{setModelToDraw}!CPacman@{CPacman}}
+\doxysubsubsection{\texorpdfstring{setModelToDraw()}{setModelToDraw()}}
+{\footnotesize\ttfamily void CPacman\+::set\+Model\+To\+Draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Rect \&}]{tmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Setting Pacman\textquotesingle{}s model depending on mode and timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmp} & Pacman\textquotesingle{}s rectangle \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_moving_object_aba4b5e98d5e86ae405617eaebae49329}{CMoving\+Object}}.
+
+\mbox{\Hypertarget{class_c_pacman_af957dadcb282b6c82132f8be6516d3dd}\label{class_c_pacman_af957dadcb282b6c82132f8be6516d3dd}} 
+\index{CPacman@{CPacman}!wallCollision@{wallCollision}}
+\index{wallCollision@{wallCollision}!CPacman@{CPacman}}
+\doxysubsubsection{\texorpdfstring{wallCollision()}{wallCollision()}}
+{\footnotesize\ttfamily bool CPacman\+::wall\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_map}{CMap}} \&}]{map }\end{DoxyParamCaption})}
+
+
+
+Checking collision with walls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & Game\textquotesingle{}s map \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean depending on does Pacman collide with wall or not 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Object/\+Sprite/\+Pacman/CPacman.\+h\item 
+src/\+Object/\+Sprite/\+Pacman/CPacman.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,87 @@
+\hypertarget{class_c_score_board}{}\doxysection{CScore\+Board Class Reference}
+\label{class_c_score_board}\index{CScoreBoard@{CScoreBoard}}
+
+
+Score \& high score counters.  
+
+
+
+
+{\ttfamily \#include $<$CScore\+Board.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_c_score_board_ad2ec203bf6f3f6b2ed734ca79be8d109}{init}} (\mbox{\hyperlink{class_c_config}{CConfig}} $\ast$setup)
+\begin{DoxyCompactList}\small\item\em Initializing font for scoreboard. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_score_board_a8e7e4d13feefba3647233fcff09736e2}{set\+Score\+Parameters}} (SDL\+\_\+\+Renderer $\ast$renderer, int score, int high\+Score)
+\begin{DoxyCompactList}\small\item\em Setting score numbers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_score_board_aacba2685c1cfd55154d77ad46b40fc16}\label{class_c_score_board_aacba2685c1cfd55154d77ad46b40fc16}} 
+void \mbox{\hyperlink{class_c_score_board_aacba2685c1cfd55154d77ad46b40fc16}{quit}} ()
+\begin{DoxyCompactList}\small\item\em Closing font. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_score_board_a9b2abde332e3d1ea1ed684410f4e0582}{draw}} (SDL\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Drawing scoreboard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Score \& high score counters. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_score_board_a9b2abde332e3d1ea1ed684410f4e0582}\label{class_c_score_board_a9b2abde332e3d1ea1ed684410f4e0582}} 
+\index{CScoreBoard@{CScoreBoard}!draw@{draw}}
+\index{draw@{draw}!CScoreBoard@{CScoreBoard}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void CScore\+Board\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Drawing scoreboard. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & App\textquotesingle{}s renderer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_score_board_ad2ec203bf6f3f6b2ed734ca79be8d109}\label{class_c_score_board_ad2ec203bf6f3f6b2ed734ca79be8d109}} 
+\index{CScoreBoard@{CScoreBoard}!init@{init}}
+\index{init@{init}!CScoreBoard@{CScoreBoard}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool CScore\+Board\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_config}{CConfig}} $\ast$}]{setup }\end{DoxyParamCaption})}
+
+
+
+Initializing font for scoreboard. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em setup} & Game\textquotesingle{}s configurations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean success variable 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_score_board_a8e7e4d13feefba3647233fcff09736e2}\label{class_c_score_board_a8e7e4d13feefba3647233fcff09736e2}} 
+\index{CScoreBoard@{CScoreBoard}!setScoreParameters@{setScoreParameters}}
+\index{setScoreParameters@{setScoreParameters}!CScoreBoard@{CScoreBoard}}
+\doxysubsubsection{\texorpdfstring{setScoreParameters()}{setScoreParameters()}}
+{\footnotesize\ttfamily void CScore\+Board\+::set\+Score\+Parameters (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{int}]{score,  }\item[{int}]{high\+Score }\end{DoxyParamCaption})}
+
+
+
+Setting score numbers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & App\textquotesingle{}s renderer \\
+\hline
+{\em score} & Current score \\
+\hline
+{\em high\+Score} & Current high score \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game\+Map/CScore\+Board.\+h\item 
+src/\+Game\+Map/CScore\+Board.\+cpp\end{DoxyCompactItemize}
